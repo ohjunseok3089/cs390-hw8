@@ -11,6 +11,9 @@ export function View() {
       setPosts(json);
     })();
   }, []);
+  const onDelete = () => {
+    delete
+  }
   return (
     <div>
       <Link to="/"> Home</Link>
@@ -19,14 +22,21 @@ export function View() {
           <div
             style={{
               border: "2px solid",
-              width: "50vw",
+              width: "35%",
               margin: "auto",
               textAlign: "center",
+              padding: "1vw",
+              marginBottom: "1vw",
             }}
           >
-            <h2 style={{margin: "0.2rem"}}>{post.title}</h2>
-            <div>{post.content}</div>
+            <div>
+              <h2 style={{margin: "0.2rem"}}>{post.title}</h2>
+              <div>{post.content}</div>
+              <button>DELETE</button>
+            </div>
+
           </div>
+          
         ))}
       </div>
     </div>
