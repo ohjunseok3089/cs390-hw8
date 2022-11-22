@@ -11,25 +11,32 @@ export function View() {
       setPosts(json);
     })();
   }, []);
-  const onDelete = () => {
-    delete
-  }
+  
   return (
     <div>
       <Link to="/"> Home</Link>
-      <div>
+      <div style={{
+        boxShadow: "1px 2px 3px 4px rgba(20,20,20,0.4)",
+        padding: "1vw",
+        margin: "1vw",
+      }}>
         {posts.map((post) => (
           <div
             style={{
               border: "2px solid",
-              width: "35%",
+              width: "29.8%",
               margin: "auto",
               textAlign: "center",
               padding: "1vw",
               marginBottom: "1vw",
+              marginLeft: ".5vw",
+              marginRight: ".5vw",
+              display: "inline-block"
             }}
           >
-            <div>
+            <div
+              
+            >
               <h2 style={{margin: "0.2rem"}}>{post.title}</h2>
               <div>{post.content}</div>
               <button>DELETE</button>
